@@ -27,7 +27,7 @@ export default function usePaginateFetch(
       setLoading(true);
       setError(false);
 
-      const params = {page, limit, sort, keyword}
+      const params = {page, limit, sort, term}
 
 
       axios({

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Form, Button, InputGroup, FormControl} from 'react-bootstrap'
+import {Form, InputGroup, FormControl} from 'react-bootstrap'
 import { FaSearch } from "react-icons/fa"
 import {useHistory} from 'react-router-dom'
 

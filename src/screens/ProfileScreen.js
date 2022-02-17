@@ -14,7 +14,7 @@ import { FaEdit } from "react-icons/fa"
 import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { FaPhone, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
-import { Message, Loader, EditProfileModal } from "../components";
+import { Message, Loader } from "../components";
 import { FaTimes } from "react-icons/fa";
 import { updateUser } from "../store/users";
 import { listMyOrders } from "../store/orders";
@@ -28,7 +28,6 @@ const ProfileScreen = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState(null);
   const [editMode] = useState(false);
-  const [uploading, setUploading] = useState(false)
 
   const history = useHistory();
   const dispatch = useDispatch();
@@ -68,7 +67,6 @@ const ProfileScreen = () => {
 
   const handleFileChange = async (e) => {
       const img = e.target.files[0];
-      console.log(img)
       const form = new FormData();
       form.append("image", img);
       try {
@@ -79,10 +77,8 @@ const ProfileScreen = () => {
          };
          const { data } = await axios.post("/api/upload", form, config);
          dispatch(updateUser({picture: data}))
-         setUploading(false);
       } catch (error) {
          console.log(error);
-         setUploading(false);
       }
    };
 
