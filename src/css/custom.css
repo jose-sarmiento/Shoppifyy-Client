@@ -1,0 +1,178 @@
+html {
+	font-size: 14px;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+.navbar {
+	position: sticky;
+	top:  0;
+	height: 50px;
+	z-index: 100;
+}
+
+.header-profile {
+	height: 100%;
+}
+
+.header-profile-img {
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.card-image {
+	height: 15rem;
+	padding: .5rem;
+	overflow: hidden;
+	margin-bottom: 0!important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.card-img-top {
+	object-fit: cover;
+	max-height: 90%;
+	max-width: 90%;
+
+	object-position: 50% 50%;
+}
+
+.nav-name {
+	outline: none;
+}
+
+.nav-name::focus,
+.nav-name::active
+ {
+  outline: none !important;
+}
+
+.side-category {
+	position: sticky;
+	top:  45px;
+	z-index: 500;
+	padding: 3rem 0;
+}
+
+.list-group-item {
+	text-transform: capitalize;
+}
+
+.list-group-item:hover {
+	/*cursor: pointer;
+	background: rgba(0, 0, 0, .5);*/
+}
+
+.flex-between {
+	display: flex!important;
+	align-items: center;
+	justify-content: space-between;
+}
+.dropdown-toggle-name {
+	text-transform: capitalize;
+	font-weight: 700;
+}
+
+.shipping-form-label {
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.profile-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem .6rem;
+	flex-direction: column;
+}
+
+.profile {
+	height: 100px;
+	width: 100px;
+	position: relative;
+	padding: 0;
+}
+.profile-image {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center center;
+	margin: 0;
+}
+
+.profile-edit-container {
+	cursor: pointer;
+	transition: transform .3s ease;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: #fff;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.profile-edit {
+	font-size: 12px;
+	color:  #444!important;
+}
+
+.profile-input {
+	display: none;
+}
+
+.profile-edit:hover {
+	transform: scale(1.1);
+}
+
+.profile-sm {
+	height: 100%;
+	width: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border:  1px solid red;
+	align-self: center;
+}
+
+.profile-row {
+	border-top: 2px dashed #444;
+	width: 100%;
+	margin-top: 1.5rem;
+}
+
+.profile-row p {
+	margin-bottom: 0!important;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+.btn-between {
+	display: flex;
+}
+
+.btn-between button:first-child {
+	flex: 1;
+}
+
+.search-form {
+	width: 20rem;
+	display: flex;
+	align-items: center;
+}
+
