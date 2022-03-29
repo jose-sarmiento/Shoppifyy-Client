@@ -25,7 +25,6 @@ const CartScreen = () => {
     const qty = location.search ? Number(location.search.split("=")[1]) : 1;
 
     const { cartItems } = useSelector((state) => state.cart);
-    console.log(cartItems)
 
     useEffect(() => {
         if (id) {

@@ -8,7 +8,7 @@ const CART_SAVE_PAYMENT_METHOD = 'CART_SAVE_PAYMENT_METHOD'
 
 
 export const addToCart = (id, qty) => async (dispatch, getState) => {
-    const { data } = await axios.get(`/api/products/${id}`)
+    const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/products/${id}`)
   
     dispatch({
       type: CART_ADD_ITEM,

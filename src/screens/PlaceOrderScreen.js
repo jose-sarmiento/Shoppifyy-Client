@@ -25,10 +25,7 @@ const PlaceOrderScreen = () => {
 	cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice
 
 	useEffect(() => {
-		if(success_create) {
-			console.log("redirect")
-			history.push(`/order/${order._id}`)
-		}
+		if(success_create)history.push(`/order/${order._id}`)
 		// eslint-disable-next-line
 	},[history, success_create])
 

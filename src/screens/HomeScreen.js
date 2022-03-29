@@ -8,6 +8,7 @@ import Product from "../components/Product";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 import usePaginateFetch from "../hooks/usePaginateFetch";
+import banner from "../banner.jpg"
 
 const HomeScreen = () => {
   const { keyword } = useParams();
@@ -25,7 +26,6 @@ const HomeScreen = () => {
   );
 
   useEffect(() => {
-    // console.log(keyword)
     if(!keyword) {
       setPage(1)
       setSort("createdAt")
@@ -101,15 +101,8 @@ const HomeScreen = () => {
     <>
       {error && <Message variant="danger">{error}</Message>}
 
-      <section className="bg-dark py-5">
-        <div className="container px-4 px-lg-5 my-5">
-          <div className="text-center text-white">
-            <h1 className="display-4 fw-bolder">Shop in style</h1>
-            <p className="lead fw-normal text-white-50 mb-0">
-              With this shop hompeage template
-            </p>
-          </div>
-        </div>
+      <section className="banner">
+        <img src={banner} alt="banner image" />
       </section>
 
       {/*<div className="nav-category"></div>*/}

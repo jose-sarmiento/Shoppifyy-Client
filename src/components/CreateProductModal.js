@@ -31,8 +31,7 @@ const CreateProductModal = ({ show, close }) => {
                "Content-Type": "multipart/form-data",
             },
          };
-         const { data } = await axios.post("/api/upload", form, config);
-         console.log(data)
+         const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/api/upload`, form, config);
          setImage(data);
          setUploading(false);
       } catch (error) {

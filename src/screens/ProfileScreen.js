@@ -75,7 +75,7 @@ const ProfileScreen = () => {
                "Content-Type": "multipart/form-data",
             },
          };
-         const { data } = await axios.post("/api/upload", form, config);
+         const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/api/upload`, form, config);
          dispatch(updateUser({picture: data}))
       } catch (error) {
          console.log(error);

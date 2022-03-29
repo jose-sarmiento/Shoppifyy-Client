@@ -20,7 +20,6 @@ export default function usePaginateFetch(
          setTerm(keyword)
       } 
    }, [keyword])
-      console.log(page, limit, sort, term)
 
    useEffect(() => {
       let isMounted = true;
@@ -32,14 +31,12 @@ export default function usePaginateFetch(
 
       axios({
          method: "GET",
-         url: "/api/products",
+         url: `${process.env.REACT_APP_API_URL}/api/products`,
          params: params,
       })
          .then((res) => {
             if (isMounted) {
-                  console.log(res.data.docs)
-
-
+                     console.log(res.data.docs)
                      setResults((prevResults) => {
                      return [...prevResults, ...res.data.docs].filter(
                         (value, index, self) =>
@@ -56,6 +53,7 @@ export default function usePaginateFetch(
             }
          })
          .catch((e) => {
+            console.log(e)
             if (isMounted) {
                setLoading(false);
                setError(true);

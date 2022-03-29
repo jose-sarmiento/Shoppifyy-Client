@@ -23,7 +23,7 @@ const Product = React.forwardRef((props, ref) => {
       <div className="card h-100">
         {product.discount !== 0 && (
           <div
-            className="badge bg-dark text-white position-absolute"
+            className="badge badge--sale text-white position-absolute"
             style={{ top: "0.5rem", right: "0.5rem" }}
           >
             Sale
@@ -55,7 +55,7 @@ const Product = React.forwardRef((props, ref) => {
         <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
           <div className="text-center">
             <button
-              className="btn btn-outline-dark mt-auto"
+              className="btn btn-dark mt-auto"
               disabled={
                 product.countInStock === 0 || inCart(product._id) ? true : false
               }

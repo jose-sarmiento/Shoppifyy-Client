@@ -26,7 +26,7 @@ export const login = (email, password) => async (dispatch) => {
         dispatch({ type: USER_LOGIN_REQUEST })
 
         const { data } = await axios.post(
-            '/api/auth/login',
+            `${process.env.REACT_APP_API_URL}/api/auth/login`,
             { email, password },
             config
         )
@@ -61,7 +61,7 @@ export const register = (formData) => async (dispatch) => {
         dispatch({ type: USER_REGISTER_REQUEST })
 
         const { data } = await axios.post(
-            '/api/auth/register',
+            `${process.env.REACT_APP_API_URL}/api/auth/register`,
             formData,
             config
         )
@@ -93,7 +93,7 @@ export const signinGoogle = (profileObj) => async (dispatch) => {
         dispatch({ type: USER_LOGIN_REQUEST })
 
         const { data } = await axios.post(
-            '/api/auth/google-signin',
+            `${process.env.REACT_APP_API_URL}/api/auth/google-signin`,
             {
                 googleId: profileObj.googleId,
                 userInfo: {

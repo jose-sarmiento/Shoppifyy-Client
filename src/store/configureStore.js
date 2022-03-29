@@ -8,8 +8,6 @@ import productsReducer from "./products"
 import ordersReducer from "./orders"
 import cartReducer from "./cart"
 
-
-
 const appReducer = combineReducers({
     authentication: authReducer,
     users: usersReducer,

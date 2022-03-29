@@ -36,7 +36,7 @@ export const listProducts = (keyword = '', pageNumber = '', pageSize = 8) => asy
 	try {
 	  dispatch({ type: PRODUCT_LIST_REQUEST })
   
-	  const { data } = await axios.get(`/api/products/admin?keyword=${keyword}&pageNumber=${pageNumber}&pageSize=${pageSize}`)
+	  const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/products/admin?keyword=${keyword}&pageNumber=${pageNumber}&pageSize=${pageSize}`)
   
 	  dispatch({
 		type: PRODUCT_LIST_SUCCESS,
@@ -191,7 +191,6 @@ export const listProducts = (keyword = '', pageNumber = '', pageSize = 8) => asy
   }
   
   export const getTopProducts = () => async (dispatch, getState) => {
-	console.log("rerender")
 	try {
 	  dispatch({ type: PRODUCT_TOP_REQUEST })
   
